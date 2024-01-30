@@ -1,1 +1,1 @@
-cons
+export const DEV = true;
