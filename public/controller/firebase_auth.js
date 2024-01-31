@@ -1,6 +1,8 @@
-import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, singOut} from "https://www.gstatic.com/firebasejs/10.7.2/firebase-auth.js"
+import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut,} from "https://www.gstatic.com/firebasejs/10.7.2/firebase-auth.js"
 import { app } from "./firebase_core.js";
 import { DEV } from "../model/constants.js";
+import { homePageView } from "../view/home_page.js";
+import { signinPageView } from "../view/signin_page.js";
 
 const auth = getAuth(app);
 
@@ -26,13 +28,29 @@ export function attachAuthStateChangeObserver(){
 
 function authStateChangeListener(user){
     if(user){
-        console.log("user: ", user.email);
+        const postAuth = document.getElementsByClassName('myclass-postauth');
+        for (let i=0; i<postAuth.length;i++){
+            postAuth[i].classList.replace('d-none', 'd-block');
+        }
+        const preAuth = document.getElementsByClassName('myclass-preauth');
+        for(let i=0; i<preAuth.length;i++){
+            preAuth[i].classList('d-block', 'd-none');
+        }
+        homePageView();
     }else{
-        console.log('signed out');
+        const postAuth = document.getElementsByClassName('myclass-postauth');
+        for (let i=0; i<postAuth.length;i++){
+            postAuth[i].classList.replace('d-block', 'd-none');
+        }
+        const preAuth = document.getElementsByClassName('myclass-preauth');
+        for(let i=0; i<preAuth.length;i++){
+            preAuth[i].classList('d-none', 'd-block');
+        }
+        signinPageView();
     }
 
 }
 
 export async function singOutFirebase(){
-    await singOut(auth);
+    await signOut(auth);
 }

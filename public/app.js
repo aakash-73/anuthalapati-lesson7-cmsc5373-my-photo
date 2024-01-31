@@ -9,4 +9,8 @@ document.getElementById('menu-signout').onclick = onClickSignoutMenu;
 
 attachAuthStateChangeObserver();
 
-signinPageView();
+window.onload = function(e){
+    const pathname = window.location.pathname;
+    const hash = window.location.hash;
+    console.log(pathname,hash);
+}
