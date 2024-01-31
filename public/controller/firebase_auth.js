@@ -16,7 +16,7 @@ export async function signinFirebase(e){
         if(DEV) console.log('signin error: ', error);
         const errorCode = error.code;
         const errorMessage = error.message;
-        alert('Signin Error: '+ errorCode + ' '+errorMessage);
+        alert('Signin Error: '+ errorCode + ' '+ errorMessage);
     }
 }
 
