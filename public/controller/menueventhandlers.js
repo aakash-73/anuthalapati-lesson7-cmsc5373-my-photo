@@ -1,6 +1,6 @@
 import { homePageView } from "../view/home_page.js";
 import { Menu2PageView } from "../view/menu2_page.js";
-import { singOutFirebase } from "./firebase_auth.js";
+import { signOutFirebase } from "./firebase_auth.js";
 import { routePathnames } from "./route_controller.js";
 
 export function onClickHomeMenu(e) {
@@ -14,5 +14,5 @@ export function onClickMenu2Menu(e) {
 }
 
 export async function onClickSignoutMenu(e){
-    await singOutFirebase(e);
+    await signOutFirebase(e);
 }

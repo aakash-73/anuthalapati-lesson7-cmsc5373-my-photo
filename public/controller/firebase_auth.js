@@ -60,6 +60,6 @@ function authStateChangeListener(user){
     }
 }
 
-export async function singOutFirebase(){
+export async function signOutFirebase(){
     await signOut(auth);
 }
