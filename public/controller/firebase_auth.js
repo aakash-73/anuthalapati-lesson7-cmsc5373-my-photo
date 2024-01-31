@@ -1,4 +1,4 @@
-import { getAuth, signInWithEmailAndPassword, onAuthStateChanged} from "https://www.gstatic.com/firebasejs/10.7.2/firebase-auth.js"
+import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, singOut} from "https://www.gstatic.com/firebasejs/10.7.2/firebase-auth.js"
 import { app } from "./firebase_core.js";
 import { DEV } from "../model/constants.js";
 
@@ -31,4 +31,8 @@ function authStateChangeListener(user){
         console.log('signed out');
     }
 
+}
+
+export async function singOutFirebase(){
+    await singOut(auth);
 }
