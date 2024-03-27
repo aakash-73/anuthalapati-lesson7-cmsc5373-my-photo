@@ -20,5 +20,4 @@ import {
     const snapShot = await uploadBytes(storageRef, imageFile);
     const imageURL = await getDownloadURL(snapShot.ref);
     return {imageName, imageURL};
-
 }
