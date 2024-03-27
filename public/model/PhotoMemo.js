@@ -1,4 +1,5 @@
 export class PhotoMemo {
+
     constructor(data) {
         if(!data) return;
         this.title = data.title;
@@ -30,4 +31,5 @@ export class PhotoMemo {
             sharedWith: this.sharedWith,
         };
     }
+    
 }
