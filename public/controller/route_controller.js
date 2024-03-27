@@ -22,4 +22,5 @@ export function routing(pathname, hash){
     }else {
         routes[0].page(); 
     }
+    
 }
