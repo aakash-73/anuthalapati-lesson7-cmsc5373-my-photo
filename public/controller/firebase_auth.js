@@ -1,7 +1,7 @@
-import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut,} from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js"
+import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut,} from "https://www.gstatic.com/firebasejs/10.9.0/firebase-auth.js"
 import { app } from "./firebase_core.js";
 import { DEV } from "../model/constants.js";
-import { homePageView } from "../view/home_page.js";
+import { homePageView, resetPhotoMemoList } from "../view/home_page.js";
 import { signinPageView } from "../view/signin_page.js";
 import { routePathnames, routing } from "./route_controller.js";
 import { userInfo } from "../view/elements.js";
@@ -47,6 +47,7 @@ function authStateChangeListener(user){
         routing(pathname, hash);
     }else{
         userInfo.textContent = 'No User';
+        resetPhotoMemoList();
         const postAuth = document.getElementsByClassName('myclass-postauth');
         for (let i=0; i<postAuth.length;i++){
             postAuth[i].classList.replace('d-block', 'd-none');

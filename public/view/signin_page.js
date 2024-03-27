@@ -6,12 +6,12 @@ export async function signinPageView(){
     {cache: 'no-store'}
    );
  
-    const divWrapper = document.createElement('div');
+    const divWrapper = document.createElement('div'); //<div></div>
     divWrapper.style.width = "400px";
     divWrapper.classList.add('m-4', 'p-4');
     divWrapper.innerHTML= await response.text();
 
-    // attach form sumit event listener
+    // attach form submit event listener
     const form = divWrapper.getElementsByTagName('form')[0];
     form.onsubmit = signinFirebase;
 

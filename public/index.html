@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My Banner</title>
+    <title>My Photo Site</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   </head>
   <body>
     <div class ="text-center text-white bg-primary bg-opacity-75 m-2 p-2">
-    <h1>My Banner</h1>
+    <h1>My Photo Site</h1>
     </div>
 
     <!-- Top Level Menu -->
@@ -23,7 +23,7 @@
               <button id="menu-home" class = "btn btn-outline-primary me-2">Home</button>
             </li>
             <li class="myclass-postauth nav-item d-none">
-            <button id="menu-menu2" class = "btn btn-outline-primary me-2">Menu2</button>
+            <button id="menu-shared-with" class = "btn btn-outline-primary me-2">Shared With</button>
             </li>
             <li class="myclass-postauth nav-item d-none">
               <button id = "menu-signout" class = "btn btn-outline-danger me-2">Sign Out</button>
@@ -34,11 +34,11 @@
       </div>
     </nav>
 
-    <!-- place holder for single page view -->
+    <!-- place holder for singlr page view -->
     <div id = 'root' class = "m-2 p-2 bg-secondary bg-opacity-25">Single Page View</div>
 
     <!--Firebase core Library-->
-    <script type = 'module' src ="./controller/firebase_core.js"></script>
+    <script type ="module" src = "./controller/firebase_core.js"></script>
     <!-- My own custom code -->
     <script type = 'module' src = "app.js"></script>
     <!--Bootstrap lib-->

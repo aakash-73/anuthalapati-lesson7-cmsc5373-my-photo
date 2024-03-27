@@ -1,14 +1,14 @@
 import { homePageView } from "../view/home_page.js"
-import { Menu2PageView } from "../view/menu2_page.js"
+import { SharedWithPageView } from "../view/sharedwith_page.js"
 
 export const routePathnames = {
     HOME: '/',
-    MENU2: '/menu2',
+    SHAREDWITH: '/sharedWith',
 }
 
 export const routes = [
     {path: routePathnames.HOME, page: homePageView},
-    {path: routePathnames.MENU2, page: Menu2PageView}
+    {path: routePathnames.SHAREDWITH, page: SharedWithPageView}
 ];
 
 export function routing(pathname, hash){
