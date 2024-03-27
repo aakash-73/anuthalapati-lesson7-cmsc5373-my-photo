@@ -110,7 +110,6 @@ export async function onChangeImageFile(e) {
    if (!imageFile) {
       imgElement.removeAttribute('src');
       return;
-
    }
    const reader = new FileReader();
    reader.readAsDataURL(imageFile);
