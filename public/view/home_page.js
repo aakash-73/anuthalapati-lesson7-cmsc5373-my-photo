@@ -94,4 +94,5 @@ function createPhotoMemoView(photoMemo) {
     cardBody.appendChild(p);
 
     return cardView;
+    
 }
