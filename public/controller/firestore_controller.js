@@ -28,5 +28,6 @@ export async function getPhotoMemoList(uid) {
         p.set_docId(doc.id);
         photoMemoList.push(p);
     });
+    
     return photoMemoList;
 }
